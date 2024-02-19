@@ -11,3 +11,5 @@ let obj = {
 }
 obj.add();
 obj.mul()
+
+
