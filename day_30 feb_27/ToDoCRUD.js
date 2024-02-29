@@ -20,7 +20,7 @@ app.post('/todos', (req, res) => {
     todos.push(req.body)
     res.status(201).json({ msg: 'Todo Added Successfully!!' })
 })
-app.put('/todos/:id', jsonMiddleware, (req, res) => {
+app.put('/todos/:id', (req, res) => {
     const todo = todos.find(todo => todo.id === +req.params.id);
     if (todo) {
         const { id, text, completed } = req.body;
