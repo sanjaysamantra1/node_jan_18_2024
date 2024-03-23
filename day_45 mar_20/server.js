@@ -6,6 +6,13 @@ const server = app.listen(5000, () => {
     console.log('server running at http://localhost:5000');
 });
 
+let a = 5;
+let b = 5;
+
+if(a == b){
+    console.log('hiiii');
+}
+
 // static files
 app.use(express.static('public'));
 
