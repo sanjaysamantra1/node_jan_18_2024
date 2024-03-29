@@ -14,7 +14,7 @@ mongoose.connect('mongodb://0.0.0.0:27017/march2023');
 app.get('/api/auth/users', async (req, res) => {
     let users = await userModel.find({});
     res.status(200).json(users)
-})
+});
 app.post('/api/auth/register', async (req, res) => {
     req.body.password = bcrypt.hashSync(req.body.password, 8);
     try {
