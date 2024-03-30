@@ -16,7 +16,7 @@ app.get('/api/auth/users', async (req, res) => {
     res.status(200).json(users)
 });
 app.post('/api/auth/register', async (req, res) => {
-    req.body.password = bcrypt.hashSync(req.body.password, 8);
+                req.body.password = bcrypt.hashSync(req.body.password, 8);
     try {
         const newuser = new userModel(req.body);
         await newuser.save();
@@ -59,3 +59,5 @@ app.get('/api/auth/products', async (req, res) => {
     }
 })
 app.listen(PORT, () => { console.log(`Server running on port ${PORT}`) })
+
+console.log('End of the file')
